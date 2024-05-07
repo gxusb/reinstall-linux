@@ -669,7 +669,13 @@ d-i partman/mount_style select uuid
 d-i partman/choose_partition select finish
 d-i partman-auto/method string regular
 d-i partman-auto/init_automatically_partition select Guided - use entire disk
-d-i partman-auto/choose_recipe select All files in one partition (recommended for new users)
+d-i partman-basicfilesystems/no_swap boolean false
+d-i partman-auto/expert_recipe string myroot :: 1000 50 -1 ext4 \
+     $primary{ } $bootable{ } method{ format } \
+     format{ } use_filesystem{ } filesystem{ ext4 } \
+     mountpoint{ / } \
+    .
+d-i partman-auto/choose_recipe select myroot
 d-i partman-md/device_remove_md boolean true
 d-i partman-lvm/device_remove_lvm boolean true
 d-i partman-lvm/confirm boolean true
