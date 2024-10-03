@@ -10,7 +10,7 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/gxusb
   - 阿里云镜像源: https://mirrors.aliyun.com/debian
   -  `--ip-dns`: 223.5.5.5
 ```bash
-bash <(wget --no-check-certificate -qO- 'https://git-proxy.gxusb.com/https://raw.githubusercontent.com/gxusb/reinstall-linux/master/InstallNET.sh') --mirror 'https://mirrors.aliyun.com' --ip-dns '223.5.5.5' -d 12 -p 'linux12345' 
+bash <(wget --no-check-certificate -qO- 'https://git-proxy.gxusb.com/https://raw.githubusercontent.com/gxusb/reinstall-linux/master/InstallNET.sh') --mirror 'https://mirrors.aliyun.com/debian' --ip-dns '223.5.5.5' -d 12 -p 'linux12345' 
 ```
 
 
