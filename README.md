@@ -6,6 +6,12 @@
 ```bash
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/gxusb/reinstall-linux/master/InstallNET.sh') -d 12 -p 'linux12345'
 ```
+- 国内镜像
+  - 阿里云镜像源: https://mirrors.aliyun.com/debian
+```bash
+bash <(wget --no-check-certificate -qO- 'https://git-proxy.gxusb.com/https://raw.githubusercontent.com/gxusb/reinstall-linux/master/InstallNET.sh') --mirror 'https://mirrors.aliyun.com' -d 12 -p 'linux12345' 
+```
+
 
 ## 设置交换内存
 
