@@ -105,9 +105,9 @@ main() {
     echo -e "=============================================="
     echo -e "${Green}✨ Linux VPS 一键 Swap 管理工具 ✨${Font}"
     echo -e "=============================================="
-    echo -e "${Green}1️⃣  添加 Swap${Font}"
-    echo -e "${Green}2️⃣  删除 Swap${Font}"
-    echo -e "${Green}3️⃣  查看当前 Swap 状态${Font}"
+    echo -e "${Green}1 添加 Swap${Font}"
+    echo -e "${Green}2 删除 Swap${Font}"
+    echo -e "${Green}3 查看当前 Swap 状态${Font}"
     echo -e "=============================================="
     read -rp "👉 请选择操作 [1-3]: " num
 
