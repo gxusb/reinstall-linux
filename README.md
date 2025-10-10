@@ -16,7 +16,7 @@ bash <(wget -qO- 'https://raw.githubusercontent.com/gxusb/reinstall-linux/master
 
 ### 国内镜像示例
 
-- 阿里云镜像源: https://mirrors.aliyun.com/debian
+- 阿里云镜像源: <https://mirrors.aliyun.com/debian>
 - `--ip-dns`: 223.5.5.5
 
 ```bash
