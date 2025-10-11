@@ -135,7 +135,7 @@ show_menu() {
     echo -e "\n=============================================="
     echo -e "${Green}✨ Linux VPS 一键 Swap 管理工具 ✨${Font}"
     echo -e "=============================================="
-    echo -e "${Green}(1) 添加 Swap（自动推荐大小）${Font}"
+    echo -e "${Green}(1) 添加 Swap（自动推荐大小 $(get_recommended_swap)MB）${Font}"
     echo -e "${Green}(2) 删除 Swap${Font}"
     echo -e "${Green}(3) 查看当前 Swap 状态${Font}"
     echo -e "${Green}(4) 退出${Font}"
