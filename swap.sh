@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # 颜色定义
-Green='\033[32m'
-Red='\033[31m'
-Yellow='\033[33m'
-Font='\033[0m'
+Green=$'\033[32m'
+Red=$'\033[31m'
+Yellow=$'\033[33m'
+Font=$'\033[0m'
 
 [[ -e /proc/version ]] || {
   echo -e "${Red}❌ 仅支持 Linux 系统！${Font}" >&2
@@ -28,11 +28,11 @@ get_ram_mb() {
 get_recommended_swap() {
   local ram_mb=$1
   if ((ram_mb <= 2048)); then
-    echo $((ram_mb * 2))
+    echo $((ram_mb * 3 / 2))
   elif ((ram_mb <= 8192)); then
     echo "$ram_mb"
   elif ((ram_mb <= 65536)); then
-    echo $((ram_mb / 2))
+    echo $((ram_mb * 2 / 3))
   else
     echo 8192
   fi
