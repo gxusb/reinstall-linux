@@ -28,9 +28,9 @@ get_ram_mb() {
 get_recommended_swap() {
   local ram_mb=$1
   if ((ram_mb <= 2048)); then
-    echo $((ram_mb * 3 / 2))
+    echo $((ram_mb * 5 / 4))
   elif ((ram_mb <= 8192)); then
-    echo "$ram_mb"
+    echo $((ram_mb / 4))
   elif ((ram_mb <= 65536)); then
     echo $((ram_mb * 2 / 3))
   else
@@ -139,24 +139,24 @@ show_menu() {
 ==========================================
 ${Green}✨ Linux 一键 Swap 管理工具 ✨${Font}
 ==========================================
+${Green}(0) 退出${Font}
 ${Green}(1) 添加 Swap（推荐：${rec_swap} MB）${Font}
 ${Green}(2) 删除 Swap${Font}
 ${Green}(3) 查看 Swap 状态${Font}
-${Green}(4) 退出${Font}
 ==========================================
 EOF
 
-    read -rp "👉 请选择操作 [1-4]: " choice
+    read -rp "请选择操作 [0-3]: " choice
     case "$choice" in
     1) add_swap ;;
     2) del_swap ;;
     3) show_swap_status ;;
-    4)
+    0)
       echo -e "${Green}👋 再见！${Font}"
       exit 0
       ;;
     *)
-      echo -e "${Red}❌ 无效输入！请输入 1-4。${Font}"
+      echo -e "${Red}❌ 无效输入！请输入 0-3。${Font}"
       sleep 1
       ;;
     esac
