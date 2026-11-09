@@ -38,10 +38,16 @@ bash <(wget -qO- 'https://git-proxy.gxusb.com/https://raw.githubusercontent.com/
 ## swap.sh 用法
 
 - 一键添加、删除、查看 Swap，自动推荐大小，支持 OpenVZ 检测。
-- 交互式菜单，需 root 权限。
+- 交互式菜单，需 root 权限，支持 Alpine Linux 3.x。
 
 ```bash
 bash <(curl -sSL 'https://raw.githubusercontent.com/gxusb/reinstall-linux/master/swap.sh')
+```
+
+Alpine Linux 可使用系统自带的 `sh` 运行：
+
+```sh
+wget -qO- 'https://raw.githubusercontent.com/gxusb/reinstall-linux/master/swap.sh' | sh
 ```
 
 ### 国内加速
