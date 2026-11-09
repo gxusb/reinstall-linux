@@ -28,13 +28,13 @@ get_ram_mb() {
 
 get_recommended_swap() {
   if [ "$1" -le 2048 ]; then
-    printf '%s\n' "$(($1 * 5 / 4))"
+    printf '%s\n' "$1"
   elif [ "$1" -le 8192 ]; then
-    printf '%s\n' "$(($1 / 4))"
+    printf '%s\n' "$((($1 / 2)))"
   elif [ "$1" -le 65536 ]; then
-    printf '%s\n' "$(($1 * 2 / 3))"
+    printf '%s\n' 4096
   else
-    echo 8192
+    printf '%s\n' 8192
   fi
 }
 
@@ -148,10 +148,10 @@ show_menu() {
 ==========================================
 ${Green}✨ Linux 一键 Swap 管理工具 ✨${Font}
 ==========================================
-${Green}(0) 退出${Font}
-${Green}(1) 添加 Swap（推荐：${rec_swap} MB）${Font}
-${Green}(2) 删除 Swap${Font}
-${Green}(3) 查看 Swap 状态${Font}
+${Green}1) 添加 Swap（推荐：${rec_swap} MB）${Font}
+${Green}2) 删除 Swap${Font}
+${Green}3) 查看 Swap 状态${Font}
+${Green}0) 退出${Font}
 ==========================================
 EOF
 
